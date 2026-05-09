@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+header,
+main,
+footer {
+    width: 1000px;
+    margin: 0 auto;
+}
+
 body{
     font-family: "Cause", cursive;
     margin: 0;
@@ -115,13 +122,4 @@ figcaption{
 footer{
     background-color: #4A1A6A;
     padding: 10px;
-}
-
-
-.body{
-    color: #a8a3a3;
-    color: #1a4a6e;
-    columns: #362121;
-    color: #687cb3;
-
 }
