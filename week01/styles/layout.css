@@ -64,3 +64,49 @@ footer{
     padding: 40px;
 
 }
+
+
+
+.card{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    max-height: 200px;
+}
+
+.one{
+      border: 1px solid black;
+    border-radius: 10px;
+}
+
+.card-head{
+    background-color: #1a4a6e;
+    margin-top: 40px;
+    color: white;
+    padding: 20px;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+
+h3{
+    border-bottom: 1px solid #a8a3a3;
+}
+
+.pic{
+   width: 100px;
+   float: right;
+}
+
+.country{
+    display: flex;
+    flex-direction: column;
+}
+
+.flag{
+    width: 100px;
+}
+
+
