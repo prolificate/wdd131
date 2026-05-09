@@ -17,6 +17,10 @@ body{
     text-align: center;
 }
 
+main{
+    color: white;
+}
+
 header{
     background-color: #8368B3;
     color: white;
