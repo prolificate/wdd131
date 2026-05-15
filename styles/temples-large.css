@@ -1,0 +1,23 @@
+@media screen and (min-width: 600px) {
+  
+    #menu{
+        display: none;
+    }
+
+    nav{
+        display: flex;
+        gap: 1rem;
+    }
+
+    nav a{
+        padding: 1rem;
+    }
+
+    .album{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .temple img{
+        width: 100%;
+    }
+}
