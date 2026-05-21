@@ -1,0 +1,51 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main,footer{
+    max-width: 760px;
+	margin: 0 auto;
+}
+
+body{
+    font-family: "Cause", cursive;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+h2{
+    text-align: center;
+}
+
+h1,footer{
+    text-align: center;
+    background-color: green;
+    color: white;
+    padding: 1.5rem;
+}
+
+section{
+    text-align: center;
+    padding: 2rem;
+}
+
+#emoji{
+    display: none;
+}
+
+.hero{
+    padding: 1rem;
+    text-align: center;
+}
+
+.hero img{
+    width: 100%;
+    height: auto;
+    display: block;
+}

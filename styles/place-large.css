@@ -1,0 +1,50 @@
+@media screen and (min-width: 600px) {
+    .hero{
+        padding: 0;
+        position: relative;
+    }
+    
+    .hero img{
+        width: 100%;
+        display: block;
+    }
+
+    #emoji{
+        display: inline;
+    }
+
+    .img{
+        display: none;
+    }
+
+    .top{
+        background-color: rgba(255, 255, 255, 0.7);
+        position: absolute;
+        top: 130px;
+        left: 10px;
+    }
+
+    h2{
+        background-color: green;
+        color: white;
+        text-align: left;
+    }
+
+    .bottom{
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 20%;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    main,footer{
+        max-width: 100%;
+	    width: 100%;
+    }
+
+    section{
+        padding: 0;
+    }
+
+}

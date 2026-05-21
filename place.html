@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places</title>
+    <link rel="stylesheet" href="styles/place-small.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cause&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Nigeria</h1>
+    <main>
+        <div class="hero">
+           <picture>
+                <source srcset="images/hero-larger.webp" media="(min-width: 1000px)">
+                <source srcset="images/hero-small.webp" media="(min-width: 600px)">
+                <img src="images/hero-small.webp" alt="Eyo Festival in Lagos" width="400" height="200">
+            </picture>
+        </div>
+        <section class="top">
+            <h2>Data</h2>
+            <p><span class="bold">Area: </span>923,768 sq km</p>
+            <p><span class="bold">Population: </span>242,431,832</p>
+            <p><span class="bold">Capital: </span>Abuja</p>
+            <p><span class="bold">Languages: </span>Yoruba, Igbo, Hausa, English</p>
+            <p><span class="bold">Currency: </span> Naira</p>
+            <p><span class="bold">Time Zone: </span>West African Time (WAT)</p>
+            <p><span class="bold">Calling Code: </span>+234</p>
+            <p><span class="bold">Internet TLD: </span>.ng</p>
+        </section>
+        <section class="bottom">
+            <h2>Weather <span id="emoji">⛅</span></h2>
+            <img src="images/cloud.svg" alt="Weather Icon" width="70" class="img">
+            <p><span class="bold">Temperature: </span><span id="temp">8</span>^C</p>
+            <p><span class="bold">Conditions: </span> Partly Cloudly</p>
+            <p><span class="bold">Wind: </span><span id="wind">5km</span></p>
+            <p><span class="bold">Wind Chill: </span><span id="chill"></span></p>
+        </section>
+    </main>
+    <footer>
+        <p>©️copy<span id="currentyear"></span>💕Eniola Afolabi Nigeria💕</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/place.js" defer></script>
+</body>
+</html>
