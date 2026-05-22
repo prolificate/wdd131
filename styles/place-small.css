@@ -1,4 +1,6 @@
-
+:root{
+    background-color: white;
+}
 
 *{
     padding: 0;
@@ -48,4 +50,8 @@ section{
     width: 100%;
     height: auto;
     display: block;
+}
+
+.bottom h2::after{
+    content: "";
 }
