@@ -66,30 +66,53 @@ const temples = [
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
-  // Add more temple objects here...
+  {
+  templeName: "Rome Italy",
+  location: "Rome, Italy",
+  dedicated: "2019, March, 10",
+  area: 41010,
+  imageUrl: "https://..."
+},
+{
+  templeName: "Accra Ghana",
+  location: "Accra, Ghana",
+  dedicated: "2004, January, 11",
+  area: 17500,
+  imageUrl: "https://..."
+},
+{
+  templeName: "Nairobi Kenya",
+  location: "Nairobi, Kenya",
+  dedicated: "2025, May, 18",
+  area: 19800,
+  imageUrl: "https://..."
+}
 ];
 
-const container = document.querySelector("album");
-function displayTemples(templeList){
+const container = document.querySelector(".album");
+function displayTemples(templeList) {
+
   container.innerHTML = "";
-  templeList.forEach(temples => {
+
+  templeList.forEach(temple => {
+
     const card = document.createElement("section");
     card.classList.add("card");
 
-    const card = document.createElement("h2");
+    const name = document.createElement("h2");
     name.textContent = temple.templeName;
 
     const location = document.createElement("p");
-    location.textContent = "Location: ${temple.location}"
+    location.textContent = `Location: ${temple.location}`;
 
     const dedicated = document.createElement("p");
-    dedicated.textContent = "Dedicated: ${temple.dedicated}";
+    dedicated.textContent = `Dedicated: ${temple.dedicated}`;
 
     const area = document.createElement("p");
-    area.textContent = "Size: ${temple.area.toLocaleString()}sq ft";
+    area.textContent = `Size: ${temple.area.toLocaleString()} sq ft`;
 
     const image = document.createElement("img");
-    image.scr = temple.imageUrl;
+    image.src = temple.imageUrl;
     image.alt = temple.templeName;
     image.loading = "lazy";
 
@@ -100,40 +123,6 @@ function displayTemples(templeList){
     card.appendChild(image);
 
     container.appendChild(card);
+
   });
 }
-
-displayTemples(temples);
-
-document.querySelector("#home").addEventListener("click",() =>{
-  displayTemples(temples)
-});
-
-document.querySelector("#old").addEventListener("click",() =>{
-  const oldTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear()
-   < 1900);
-  displayTemples(oldTemples);
-});
-
-document.querySelector("#new").addEventListener("click",() =>{
-  const newTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
-
-  displayTemples(newTemples);
-});
-
-document.querySelector("#large").addEventListener("click",() =>{
-  const largeTemples = temples.filter(temple => new Date(temple.area).getFullYear() > 90000);
-
-  displayTemples(largeTemples);
-});
-
-document.querySelector("#small").addEventListener("click",() =>{
-  const smallTemples = temples.filter(temple => new Date(temple.area).getFullYear() > 10000);
-
-  displayTemples(smallTemples);
-});
-
-
-
-
-
