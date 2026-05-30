@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+     font-family: "Cause", cursive;
+}
+
+header,footer{
+    padding: 2rem;
+    background-color: purple;
+    color: white;
+}
+
+h1{
+    text-align: center;
+}
+
+
+.text{
+    font-size: 1.7rem;
+}
+
+.up{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    margin: 1rem;
+    background-color: rgb(70, 64, 64);
+}
+
+nav.open{
+    display: block;
+}
+
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+
+nav a{
+    display: block;
+    padding: 2px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: #4b004b;
+    color: blue;
+}
+
+.album{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.card{
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    text-align: center;
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#menu{
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before{
+    content: "\2630";
+    color: white;
+    font-size: 2rem;
+}
+
+#menu.open::before{
+    content: "❌";
+}
+
+footer{
+    text-align: center;
+}

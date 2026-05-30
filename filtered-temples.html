@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About responsive menus and responsive pages that shows photo albums">
+    <meta name="author" content="Afolaobi Eniola">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="styles/filtere-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cause:wght@100..900&display=swap" rel="stylesheet">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="up">
+            <div class="text">Temple Album</div>
+            <button type="button" id="menu" aria-label="Open navigation menu"></button>
+           <nav id="nav">
+                <ul>
+                    <li><a href="home" title="Our Home" class="active">
+                        Home</a></li>
+                    <li><a href="old">Old</a></li>
+                    <li><a href="new">New</a></li>
+                    <li><a href="large">Large</a></li>
+                    <li><a href="small">Small</a></li>
+                </ul>
+           </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Home</h1>
+        <div class="album">
+           
+        </div>
+    </main>
+    <footer>
+        <p>©️copy<span id="currentyear"></span>💕Eniola Afolabi Nigeria💕</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
