@@ -66,27 +66,46 @@ const temples = [
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
+ {
+    templeName: "Kirtland Temple",
+    location: "Kirtland, Ohio, United States",
+    dedicated: "1836, March, 27",
+    area: 15000,
+    imageUrl:
+    "https://churchofjesuschristtemples.org/assets/img/temples/kirtland-temple/kirtland-temple-1275-main.jpg"
+  },
   {
-  templeName: "Rome Italy",
-  location: "Rome, Italy",
-  dedicated: "2019, March, 10",
-  area: 41010,
-  imageUrl: "https://..."
-},
-{
-  templeName: "Accra Ghana",
-  location: "Accra, Ghana",
-  dedicated: "2004, January, 11",
-  area: 17500,
-  imageUrl: "https://..."
-},
-{
-  templeName: "Nairobi Kenya",
-  location: "Nairobi, Kenya",
-  dedicated: "2025, May, 18",
-  area: 19800,
-  imageUrl: "https://..."
-}
+    templeName: "Nauvoo Temple",
+    location: "Nauvoo, Illinois, United States",
+    dedicated: "1846, April, 3",
+    area: 54000,
+    imageUrl:
+    "https://churchofjesuschristtemples.org/assets/img/temples/nauvoo-illinois-temple/nauvoo-illinois-temple-50576-main.jpg"
+  },
+  {
+    templeName: "Salt Lake Temple",
+    location: "Salt Lake City, Utah, United States",
+    dedicated: "1893, April, 6",
+    area: 382207,
+    imageUrl:
+    "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-15669-main.jpg"
+  },
+  {
+    templeName: "London England Temple",
+    location: "London, England",
+    dedicated: "1955, October, 15",
+    area: 42652,
+    imageUrl:
+    "https://churchofjesuschristtemples.org/assets/img/temples/london-england-temple/london-england-temple-56886-main.jpg"
+  },
+  {
+    templeName: "Preston England Temple",
+    location: "Preston, England",
+    dedicated: "1998, June, 7",
+    area: 69630,
+    imageUrl:
+    "https://churchofjesuschristtemples.org/assets/img/temples/preston-england-temple/preston-england-temple-45357-main.jpg"
+  }
 ];
 
 const container = document.querySelector(".album");
@@ -112,9 +131,10 @@ function displayTemples(templeList) {
     area.textContent = `Size: ${temple.area.toLocaleString()} sq ft`;
 
     const image = document.createElement("img");
-    image.src = temple.imageUrl;
-    image.alt = temple.templeName;
-    image.loading = "lazy";
+  
+    image.setAttribute("src", temple.imageUrl);
+    image.setAttribute("alt", temple.templeName);
+    image.setAttribute("loading", "lazy");
 
     card.appendChild(name);
     card.appendChild(location);
@@ -126,3 +146,51 @@ function displayTemples(templeList) {
 
   });
 }
+
+displayTemples(temples);
+
+
+document.querySelector("#home").addEventListener("click", function(event) {
+    event.preventDefault();
+    displayTemples(temples);
+});
+
+document.querySelector("#old").addEventListener("click", function(event) {
+    event.preventDefault();
+
+    const oldTemples = temples.filter(function(temple) {
+        return Number(temple.dedicated.substring(0, 4)) < 1900;
+    });
+
+    displayTemples(oldTemples);
+});
+
+document.querySelector("#new").addEventListener("click", function(event) {
+    event.preventDefault();
+
+    const newTemples = temples.filter(function(temple) {
+        return Number(temple.dedicated.substring(0, 4)) > 2000;
+    });
+
+    displayTemples(newTemples);
+});
+
+document.querySelector("#large").addEventListener("click", function(event) {
+    event.preventDefault();
+
+    const largeTemples = temples.filter(function(temple) {
+        return temple.area > 90000;
+    });
+
+    displayTemples(largeTemples);
+});
+
+document.querySelector("#small").addEventListener("click", function(event) {
+    event.preventDefault();
+
+    const smallTemples = temples.filter(function(temple) {
+        return temple.area < 10000;
+    });
+
+    displayTemples(smallTemples);
+});
