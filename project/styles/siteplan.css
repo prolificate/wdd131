@@ -1,0 +1,86 @@
+:root{
+    --bg-color: #008751;
+    --fg-color: white;
+    --border: #d7dde2;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+body{
+     font-family: "Roboto", Arial, sans-serif;
+}
+
+h1,h2,h3{
+    font-family: "Merriweather", Georgia, serif;
+}
+
+main {
+  width: min(960px, 92%);
+  margin: 2rem auto;
+}
+
+#section{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    gap: 1.5rem;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+section{
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+h2{
+    color: #008751;
+    margin-bottom: 1rem;
+}
+
+p{
+     margin-bottom: 1rem;
+}
+
+.wireframe{
+    background-color: var(--bg-color);
+    border: var(--border);
+    padding: 1.74rem;
+    padding: 1rem;
+    background: #eef3f5;
+    border: 1px dashed #9daab3;
+    border-radius: 8px;
+
+}
+
+.wireframe div {
+  min-height: 42px;
+  padding: 0.75rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
