@@ -1,10 +1,21 @@
 @media screen and (max-width: 500px){
+    .body{
+        max-width: 500px;
+    }
+
     .site{
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
     gap: 10px;
     padding: 10px;
+    }
+
+    .up{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
     }
 
     nav {
@@ -18,7 +29,8 @@
     }
 
     nav.open{
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 
 
@@ -66,13 +78,13 @@
     right: 1rem;
     }
 
-    #menu::before{
+    #menu::after{
         content: "\2630";
         color: #006B3C;
         font-size: 2rem;
     }
 
-    #menu.open::before{
+    #menu.open::after{
         content: "❌";
     }
 
