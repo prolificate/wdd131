@@ -28,7 +28,6 @@ header{
 }
 
 body{
-    min-width: 750px;
     color: var(--primary-dark);
     background-color: var(--bg);
 }
@@ -150,9 +149,8 @@ footer{
 }
 
 .up{
-        display: flex;
-        
-        justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .top h1{
