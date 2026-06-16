@@ -16,6 +16,13 @@ const site = [
     },
 ]
 
+const currentPage = window.location.href;
+document.querySelectorAll('nav a').forEach(link => {
+    if (link.href === currentPage) {
+        link.classList.add('active');
+    }
+});
+
 const div = document.querySelector(".site");
 function display(list){
     div.innerHTML = "";

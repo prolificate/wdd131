@@ -391,4 +391,9 @@
         background-color: #1B5E20;
     }
 
+    nav a.active {
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary)
+    }
+
 }

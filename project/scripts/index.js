@@ -8,3 +8,10 @@ button.addEventListener("click", () => {
     nav.classList.toggle('open');
     button.classList.toggle('open');
 });
+
+const currentPage = window.location.href;
+document.querySelectorAll('nav a').forEach(link => {
+    if (link.href === currentPage) {
+        link.classList.add('active');
+    }
+});

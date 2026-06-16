@@ -61,6 +61,13 @@ submitBtn.addEventListener('click', () => {
     window.location.href = 'success.html';
 });
 
+const currentPage = window.location.href;
+document.querySelectorAll('nav a').forEach(link => {
+    if (link.href === currentPage) {
+        link.classList.add('active');
+    }
+});
+
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
 

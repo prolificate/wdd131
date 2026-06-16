@@ -280,6 +280,11 @@ h2{
     padding: 3rem 1rem;
 }
 
+nav a.active {
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary);
+}
+
 .form-card {
     background: white;
     border-radius: 16px;
