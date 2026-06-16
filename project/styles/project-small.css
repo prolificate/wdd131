@@ -68,6 +68,9 @@ z-index: 999;
 nav.open{
     display: flex;
     flex-direction: column;
+    background-color: var(--primary);
+    color: white;
+    padding: 5px;
 }
 
 
@@ -80,7 +83,7 @@ nav ul{
 
 nav a{
     display: block;
-    padding: 2px;
+    padding: 1rem;
     color: white;
     text-decoration: none;
 }
