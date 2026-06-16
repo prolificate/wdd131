@@ -271,4 +271,124 @@
         color: var(--bg);
     }
 
+    .newsletter-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 80vh;
+    }
+
+    .newsletter-hero img{
+        display: block;
+        min-height: 80vh;
+        border-radius: 5px;
+    }
+
+    .newsletter-hero {
+        background-color: #1B5E20;
+        color: white;
+        text-align: center;
+        padding: 4rem 2rem;
+    }
+
+    .newsletter-hero h1 {
+        padding: 2rem;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .newsletter-hero p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+    }
+
+    .form-section {
+        display: flex;
+        justify-content: center;
+        padding: 3rem 1rem;
+    }
+
+    .form-card {
+        background: white;
+        border-radius: 16px;
+        padding: 2.5rem;
+        width: 100%;
+        max-width: 500px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    }
+
+    .form-card h2 {
+        text-align: center;
+        color: #1B5E20;
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+        color: #1B5E20;
+        font-size: 0.95rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"] {
+        padding: 0.75rem 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+        outline: none;
+        transition: border 0.2s;
+    }
+
+    .form-group input:focus {
+        border-color: #006B3C;
+    }
+
+    .error {
+        color: red;
+        font-size: 0.8rem;
+        margin-top: 0.3rem;
+    }
+
+    .checkbox-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.3rem;
+    }
+
+    .checkbox-label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 400;
+        color: #333;
+        cursor: pointer;
+    }
+
+    /* SUBMIT BUTTON */
+    #submitBtn {
+        width: 100%;
+        padding: 0.9rem;
+        background-color: #006B3C;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 1rem;
+        transition: background 0.2s;
+    }
+
+    #submitBtn:hover {
+        background-color: #1B5E20;
+    }
+
 }
